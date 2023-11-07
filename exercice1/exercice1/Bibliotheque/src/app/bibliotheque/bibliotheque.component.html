@@ -1,0 +1,15 @@
+<h1>Liste des livres</h1>
+<ul>
+    <li *ngFor="let livre of livres">
+        <h2>{{livre.titre}}</h2>
+        <p>Auteur : {{livre.auteur}}</p>
+        <p>Date : {{livre.anneePubli}}</p>
+        
+</ul>
+
+<form (submit)="ajoutLivre()">
+    <input type="text" name="titre" [(ngModel)]="vLivre.titre">
+    <input type="text" name="auteur" [(ngModel)]="vLivre.auteur">
+    <input type="number" name="date" [(ngModel)]="vLivre.anneePubli">
+    <input type="submit" value="envoi">
+</form>
